@@ -1,6 +1,6 @@
 # Slim Project - Daily Quote App
 
-Last Update `05/05/2026 - 16:16`
+Last Update `06/05/2026 - 16:10`
 
 + This is a daily quote app built with `Slim` for PHP. Development is in its earliest stages and more information will be coming soon.
 
@@ -10,15 +10,25 @@ Last Update `05/05/2026 - 16:16`
 
 ### Todos
 
-#### Tasks `2` Completed `0` 
+#### Tasks `8` Completed `3` 
 
-+ `TODO:` Install Composer
-+ `TODO:` Install Slim
++ `TODO: COMPLETED: 06-04-2026` Install Composer
++ `TODO: COMPLETED: 06-04-2026` Install Slim
++ `TODO: COMPLETED: 06-04-2026` Create a new Slim project
++ `TODO:` Create a new route
++ `TODO:` Render PHP Templates
++ `TODO:` Server CSS and main script
++ `TODO:` Improve CSS Styling
++ `TODO:` Deploy to Web Server
 
 
 #### Log
 
-+ `vx`
+
++ `v2`
+  + Installed Slim to local system via Composer
+
++ `v1`
   + Installed Slim to local system via Composer
 
 . . .
