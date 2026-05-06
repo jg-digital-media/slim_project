@@ -26,7 +26,16 @@ return function (App $app) {
     });
 
     $app->get('/', function ($request, $response) {
-        $response->getBody()->write("Home Page");
+
+        $quotes = json_decode(
+            file_get_contents(__DIR__ . '/../data/quotes.json'),
+            true
+        );
+
+        $random = $quotes[array_rand($quotes)];
+
+        $response->getBody()->write($random['quote']);
+
         return $response;
     });
 
