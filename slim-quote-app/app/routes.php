@@ -41,7 +41,7 @@ return function (App $app) {
     });
 
     $app->get('/about', function ($request, $response) {
-        $response->getBody()->write("Browse Page");
+        $response->getBody()->write("About Page");
         return $response;
     });
 
