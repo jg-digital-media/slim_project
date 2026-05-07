@@ -28,7 +28,7 @@ return function (App $app) {
     $app->get('/', function ($request, $response) {
 
         $quotes = json_decode(
-            file_get_contents(__DIR__ . '/../data/quotes.json'),
+            file_get_contents(__DIR__ . '/../public/data/quotes.json'),
             true
         );
 
@@ -45,7 +45,7 @@ return function (App $app) {
     $app->get('/browse', function ($request, $response) {
 
         $quotes = json_decode(
-            file_get_contents(__DIR__ . '/../data/quotes.json'),
+            file_get_contents(__DIR__ . '/../public/data/quotes.json'),
             true
         );
 
@@ -60,7 +60,7 @@ return function (App $app) {
     $app->get('/browse/{id}', function ($request, $response, $args) {
 
         $quotes = json_decode(
-            file_get_contents(__DIR__ . '/../data/quotes.json'),
+            file_get_contents(__DIR__ . '/../public/data/quotes.json'),
             true
         );
 
