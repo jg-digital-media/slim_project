@@ -28,9 +28,9 @@ $page_id = 'about_page';
 
         <nav>
 
-            <a href="index.php" <?php if ($page_id === 'home_page') echo 'class="active"'; ?>>Home</a>
-            <a href="browse.php" <?php if ($page_id === 'browse_page') echo 'class="active"'; ?>>Browse</a>
-            <a href="about.php" <?php if ($page_id === 'about_page') echo 'class="active"'; ?>>About</a>
+            <a href="/" <?php if ($page_id === 'home_page') echo 'class="active"'; ?>>Home</a>
+            <a href="/browse" <?php if ($page_id === 'browse_page') echo 'class="active"'; ?>>Browse</a>
+            <a href="/about" <?php if ($page_id === 'about_page') echo 'class="active"'; ?>>About</a>
 
         </nav>
 

@@ -11,7 +11,7 @@ $page_id = 'browse_page';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/../style.css">
 
     <title>View Quote | PHP Slim Project by JGDM</title>
 
@@ -29,9 +29,9 @@ $page_id = 'browse_page';
 
         <nav>
 
-            <a href="index.php" <?php if ($page_id === 'home_page') echo 'class="active"'; ?>>Home</a>
-            <a href="browse.php" <?php if ($page_id === 'browse_page') echo 'class="active"'; ?>>Browse</a>
-            <a href="about.php" <?php if ($page_id === 'about_page') echo 'class="active"'; ?>>About</a>
+            <a href="/" <?php if ($page_id === 'home_page') echo 'class="active"'; ?>>Home</a>
+            <a href="/browse" <?php if ($page_id === 'browse_page') echo 'class="active"'; ?>>Browse</a>
+            <a href="/about" <?php if ($page_id === 'about_page') echo 'class="active"'; ?>>About</a>
 
         </nav>
 
@@ -53,7 +53,7 @@ $page_id = 'browse_page';
 
             <div class="quote---view--more">
 
-                <a href="browse.php" target="_blank">View More Quotes</a>
+                <a href="/browse" target="_blank">View More Quotes</a>
 
             </div>
 

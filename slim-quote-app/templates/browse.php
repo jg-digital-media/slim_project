@@ -29,9 +29,9 @@ $page_id = 'browse_page';
 
         <nav>
 
-            <a href="index.php" <?php if ($page_id === 'home_page') echo 'class="active"'; ?>>Home</a>
-            <a href="browse.php" <?php if ($page_id === 'browse_page') echo 'class="active"'; ?>>Browse</a>
-            <a href="about.php" <?php if ($page_id === 'about_page') echo 'class="active"'; ?>>About</a>
+            <a href="/" <?php if ($page_id === 'home_page') echo 'class="active"'; ?>>Home</a>
+            <a href="/browse" <?php if ($page_id === 'browse_page') echo 'class="active"'; ?>>Browse</a>
+            <a href="/about" <?php if ($page_id === 'about_page') echo 'class="active"'; ?>>About</a>
 
         </nav>
 
@@ -40,7 +40,7 @@ $page_id = 'browse_page';
     <?php
 
     // get and retriece quotes list data
-    $quotesListPath = __DIR__ . '/../data/quotes.json';
+    $quotesListPath = __DIR__ . '/../public/data/quotes.json';
     $quotesList = [];
     if (is_readable($quotesListPath)) {
         $quotesJson = json_decode((string) file_get_contents($quotesListPath), true);
@@ -56,27 +56,17 @@ $page_id = 'browse_page';
 
             <h3>Quotes List</h3>
 
-            <?php foreach ($quotesList as $quoteRow) : ?>
-                <?php
-                if (!is_array($quoteRow) || !isset($quoteRow['quote'])) {
-                    continue;
-                }
-                $q = htmlspecialchars((string) $quoteRow['quote'], ENT_QUOTES, 'UTF-8');
-                $author = isset($quoteRow['author']) ? htmlspecialchars((string) $quoteRow['author'], ENT_QUOTES, 'UTF-8') : '';
-                ?>
-            <div class="quote---list--item">
-              
+            <?php foreach ($quotes as $q): ?>
 
-                <?php foreach ($quotes as $q): ?>
-                    
+                <div class="quote---list--item">
+                
                     <h4>
                         <?php echo $q['quote']; ?>
                     </h4>
                     
-                    <a href="/browse/<?php echo $q['id']; ?>">View More</a>
-                <?php endforeach; ?>
-
-            </div>
+                    <a href="/browse/<?php echo $q['id']; ?>" class="quote---view--more">View More</a>
+                
+                </div>
 
             <?php endforeach; ?>
 

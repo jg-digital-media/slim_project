@@ -16,7 +16,7 @@ $page_id = 'home_page';
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..90display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 
     <title>Daily Quote App | A PHP Slim Project by JGDM</title>
 
@@ -34,9 +34,9 @@ $page_id = 'home_page';
 
         <nav>
 
-            <a href="index.php" <?php if ($page_id === 'home_page') echo 'class="active"'; ?>>Home</a>
-            <a href="browse.php" <?php if ($page_id === 'browse_page') echo 'class="active"'; ?>>Browse</a>
-            <a href="about.php" <?php if ($page_id === 'about_page') echo 'class="active"'; ?>>About</a>
+            <a href="/" <?php if ($page_id === 'home_page') echo 'class="active"'; ?>>Home</a>
+            <a href="/browse" <?php if ($page_id === 'browse_page') echo 'class="active"'; ?>>Browse</a>
+            <a href="/about" <?php if ($page_id === 'about_page') echo 'class="active"'; ?>>About</a>
 
         </nav>
 
@@ -51,6 +51,8 @@ $page_id = 'home_page';
             <h3>Today's Quote</h3>
 
             <h4 id="quote-text" aria-live="polite">Loading today's quote…</h4>
+
+            <h4> <?php echo $random['quote']; ?> </h4>
 
         </article>
 
@@ -69,6 +71,6 @@ $page_id = 'home_page';
     </footer>
 
     <!-- <a href="https://github.com/jg-digital-media/express_site" target="_blank">Repository</a> -->
-    <script src="app.js" defer></script>
+    <script src="/js/app.js" defer></script>
 </body>
 </html>
