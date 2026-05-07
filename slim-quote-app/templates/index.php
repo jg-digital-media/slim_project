@@ -52,8 +52,6 @@ $page_id = 'home_page';
 
             <h4 id="quote-text" aria-live="polite">Loading today's quote…</h4>
 
-            <h4> <?php echo $random['quote']; ?> </h4>
-
         </article>
 
         <aside class="quote---author">
