@@ -65,14 +65,16 @@ $page_id = 'browse_page';
                 $author = isset($quoteRow['author']) ? htmlspecialchars((string) $quoteRow['author'], ENT_QUOTES, 'UTF-8') : '';
                 ?>
             <div class="quote---list--item">
+              
 
-                <h4><?php echo $q; ?></h4>
-
-                <!-- <?php if ($author !== '') : ?>
-                <p><?php echo $author; ?></p>
-                <?php endif; ?> -->
-
-                <a href="quote.php" class="quote---view--more">View More</a>
+                <?php foreach ($quotes as $q): ?>
+                    
+                    <h4>
+                        <?php echo $q['quote']; ?>
+                    </h4>
+                    
+                    <a href="/browse/<?php echo $q['id']; ?>">View More</a>
+                <?php endforeach; ?>
 
             </div>
 
