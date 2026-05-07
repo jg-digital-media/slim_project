@@ -34,23 +34,60 @@ return function (App $app) {
 
         $random = $quotes[array_rand($quotes)];
 
-        $response->getBody()->write($random['quote']);
+        ob_start();
+        require __DIR__ . '/../templates/index.php';
+        $output = ob_get_clean();
 
+        $response->getBody()->write($output);
         return $response;
     });
 
     $app->get('/browse', function ($request, $response) {
-        $response->getBody()->write("Browse Page");
+
+        $quotes = json_decode(
+            file_get_contents(__DIR__ . '/../data/quotes.json'),
+            true
+        );
+
+        ob_start();
+        require __DIR__ . '/../templates/browse.php';
+        $output = ob_get_clean();
+
+        $response->getBody()->write($output);
         return $response;
     });
 
     $app->get('/browse/{id}', function ($request, $response, $args) {
-        $response->getBody()->write("Quote ID: " . $args['id']);
+
+        $quotes = json_decode(
+            file_get_contents(__DIR__ . '/../data/quotes.json'),
+            true
+        );
+
+        $quote = null;
+
+        foreach ($quotes as $q) {
+            if ($q['id'] == $args['id']) {
+                $quote = $q;
+                break;
+            }
+        }
+
+        ob_start();
+        require __DIR__ . '/../templates/quote.php';
+        $output = ob_get_clean();
+
+        $response->getBody()->write($output);
         return $response;
     });
 
     $app->get('/about', function ($request, $response) {
-        $response->getBody()->write("About Page");
+        
+        ob_start();
+        require __DIR__ . '/../templates/about.php';
+        $output = ob_get_clean();
+
+        $response->getBody()->write($output);
         return $response;
     });
 
