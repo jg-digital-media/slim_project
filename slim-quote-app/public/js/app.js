@@ -1,7 +1,9 @@
-console.log("app.js connected! (slim_project - frontend - v6) - 07/05/2026 - 13:36");
+console.log("app.js connected! (slim_project - frontend - v4) - 07/05/2026 - 13:36");
+
+const basepath = "";
 
 // Link to quotes data file
-const QUOTES_DATA_URL = "/data/quotes.json";
+const QUOTES_DATA_URL = basepath + "/data/quotes.json";
 
 function localDayNumber() {
     const d = new Date();
