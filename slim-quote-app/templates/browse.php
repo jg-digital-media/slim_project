@@ -24,7 +24,7 @@ $basepath = '';
         <div class="website---titles">
 
             <h1>Daily Quote App</h1>
-            <h2><em>A PHP Slim Project <span class="app---version"><a href="https://github.com/jg-digital-media/express_project" target="_blank">v4</a></span> </em></h2>
+            <h2><em>A PHP Slim Project <span class="app---version"><a href="https://github.com/jg-digital-media/express_project" target="_blank">v5</a></span> </em></h2>
 
         </div>
 
