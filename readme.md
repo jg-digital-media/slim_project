@@ -1,6 +1,6 @@
 # Slim Project - Daily Quote App
 
-Last Update `13/05/2026 - 13:02
+Last Update `13/05/2026 - 13:15
 
 + This is a daily quote app built with `Slim` for PHP. One quote will appear per day, chosen at random. A new quote can be displayed at any time on on the home root. 
 
@@ -73,9 +73,11 @@ public_html
 ```
 
 Default Directory Structure
+
 ```text
 public_html  
-    slim_project
+slim_project
+    slim-quote-app (slim project root)
         app (slim)
         logs (slim)
         public (slim)
