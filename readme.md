@@ -1,6 +1,6 @@
 # Slim Project - Daily Quote App
 
-Last Update `13/05/2026 - 12:44
+Last Update `13/05/2026 - 13:02
 
 + This is a daily quote app built with `Slim` for PHP. One quote will appear per day, chosen at random. A new quote can be displayed at any time on on the home root. 
 
@@ -43,6 +43,50 @@ app->get('/', function ($request, $response) {
     return $response;
 });
 
+```
+
+
+##### Deployment
+
+Deployed today (13/05/2026 - 12:44) to Web Server.  Deployment is possible via FTP but takes practice and can take time.  It's about debugging issues with server paths, URL paths, Apache rewrites, framework routing
+middleware, production structure and placement of code.
+
+I am also thinking about project directory structure. After a lot of study and experimentation I worked out a stucture that works well on Shared Hosting - a more flattened directory structure than the default structure that Slim gives you.
+
+e.g. 
+```text
+
+public_html  
+    slim_project
+        app (slim)
+        data (custom)
+        js (custom)
+        logs (slim)
+        public (slim)
+        sass (custom)
+        src (slim)
+        templates (Slim)
+        tests (slim)
+        var (Slim)
+        vendor (Slim)
+
+```
+
+Default Directory Structure
+```text
+public_html  
+    slim_project
+        app (slim)
+        logs (slim)
+        public (slim)
+            data (custom)
+            js (custom)
+            sass (custom)
+        src (slim)
+        templates (Slim)
+        tests (slim)
+        var (Slim)
+        vendor (Slim)
 ```
 
 #### Links
