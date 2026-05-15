@@ -1,6 +1,6 @@
 # Slim Project - Daily Quote App
 
-Last Update `13/05/2026 - 13:15
+Last Update `15/05/2026 - 13:09
 
 + This is a daily quote app built with `Slim` for PHP. One quote will appear per day, chosen at random. A new quote can be displayed at any time on on the home root. 
 
@@ -10,7 +10,7 @@ Last Update `13/05/2026 - 13:15
 
 ### Todos
 
-#### Tasks `9` Completed `7` 
+#### Tasks `10` Completed `7` 
 [Back to top](#content-menu)
 
 + `TODO: COMPLETED: 06-05-2026` Install Composer
@@ -20,6 +20,7 @@ Last Update `13/05/2026 - 13:15
 + `TODO: COMPLETED: 07-05-2026` Render PHP Templates
 + `TODO: COMPLETED: 07-05-2026` Server CSS and main script
 + `TODO: COMPLETED: 13-05-2026` Deploy to Web Server
++ `TODO: COMPLETED: 15-05-2026` Added reference to browser favicon
 + `TODO: ` Get and display current date dynamically with PHP
 + `TODO: ` Improve CSS Styling
 
